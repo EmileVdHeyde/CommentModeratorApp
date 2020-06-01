@@ -32,7 +32,6 @@ def home():
 
 @app.route('/predict',methods=['POST'])
     
-
 def predict():
         if request.method == 'POST':
            message = request.form['message']
@@ -49,7 +48,7 @@ def predict():
             my_prediction="Accepted"
         elif probability>=.7:
             my_prediction="Reject"
-	elif probability>.3:
+        elif probability>.3:
             my_prediction="Neutral"
         else:
             my_prediction="NoOutcome"
