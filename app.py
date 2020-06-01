@@ -49,8 +49,10 @@ def predict():
             my_prediction="Accepted"
         elif probability>=.7:
             my_prediction="Reject"
-        else:
+	elif probability>.3:
             my_prediction="Neutral"
+        else:
+            my_prediction="NoOutcome"
             
             my_prediction = predict(data)
             #outputx = str(answer) + "  --->  Probability of Reject is: " + numberpred 
